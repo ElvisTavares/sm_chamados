@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Model\Chamado;
 class ChamadosController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class ChamadosController extends Controller
      */
     public function index()
     {
-        //
+        $chamados = Chamado::all();
+        return view('chamados.index',compact('chamados'));
         
     }
 

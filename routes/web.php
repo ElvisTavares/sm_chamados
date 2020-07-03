@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 Route::get('/chamados', 'TesteController@index');
 Route::get('/cad_chamados','ChamadosController@create');
+Route::get('/list_chamados','ChamadosController@index');

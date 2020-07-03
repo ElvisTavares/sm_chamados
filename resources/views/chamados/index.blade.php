@@ -41,5 +41,26 @@
   </div>
 </nav>
 
+<h1>Lista de chamados</h1>
+
+<table class="table">
+  <tbody>
+    @foreach($chamados as $chamado)
+      <tr>
+      <td>{{$chamado->id }}</td>
+        <td>{{$chamado->nome_pai }}</td>
+        <td>{{$chamado->nome_aluno }}</td>
+        <td>{{$chamado->turma }}</td>
+        <td>{{$chamado->email }}</td>
+        <td>{{$chamado->telefone}}</td>
+        <td>{{$chamado->assunto }}</td>
+        <td>{{$chamado->created_at }}</td>
+      </tr>
+
+    @endforeach
+
+  </tbody>
+
+</table>
 
 @endsection
