@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/chamados', 'TesteController@index');
-Route::get('/cad_chamados','ChamadosController@create');
+Route::get('/criar_chamado','ChamadosController@create');
+Route::post('/criar_chamado','ChamadosController@store');
 Route::get('/list_chamados','ChamadosController@index');

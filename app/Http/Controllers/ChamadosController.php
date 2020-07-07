@@ -37,7 +37,10 @@ class ChamadosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $dados = $request->all();
+       Chamado::create($dados);
+
+       return back()->with(['Sucess' => 'Chamado cadastrado com sucesso']);
     }
 
     /**
